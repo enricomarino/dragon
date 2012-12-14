@@ -8,3 +8,100 @@
  * @license MIT
  */
 
+/**
+ * Module dependencies.
+ */
+
+var Emitter = require('emitter');
+
+/**
+ * Expose `Draggable`.
+ */
+
+module.exports = Draggable;
+
+/**
+ * Initialize a draggable element
+ * on the given `el`.
+ *
+ * Emits:
+ *
+ *   - `dragstart` on drag start
+ *   - `dragenter` on drag enter
+ *   - `dragover` on drag over
+ *   - `dragleave` on drag leave
+ *   - `drop` on drop
+ *
+ * @param {Element} el
+ * @api public
+ */
+
+function Draggable(el) {
+  if (!(this instanceof Draggable)) return new Draggable(el);
+  Emitter.call(this);
+  this.el = el;
+  el.draggable = true;
+  el.addEventListener('dragstart', this.ondragstart.bind(this), false);
+  el.addEventListener('dragenter', this.ondragenter.bind(this), false);
+  el.addEventListener('dragover', this.ondragover.bind(this), false);
+  el.addEventListener('dragleave', this.ondragleave.bind(this), false);
+  el.addEventListener('drop', this.ondrop.bind(this), false);
+}
+
+/**
+ * Mixin emitter.
+ */
+
+Emitter(Draggable.prototype);
+
+/**
+ * Dragenter handler.
+ */
+
+Draggable.prototype.ondragstart = function(event){
+  event.preventDefault();
+  event.dataTransfer.dropEffect = 'move';
+  this.emit('dragstart', event);
+  return false;
+};
+
+/**
+ * Dragenter handler.
+ */
+
+Draggable.prototype.ondragenter = function(event){
+  event.preventDefault();
+  this.emit('dragenter', event);
+  return false;
+};
+
+/**
+ * Dragover handler.
+ */
+
+Draggable.prototype.ondragover = function(event){
+  event.preventDefault();
+  event.dataTransfer.dropEffect = 'move';
+  this.emit('dragover', event);
+  return false;
+};
+
+/**
+ * Dragleave handler.
+ */
+
+Draggable.prototype.ondragleave = function(event){
+  event.preventDefault();
+  this.emit('dragleave', event);
+  return false;
+};
+
+/**
+ * Drop handler.
+ */
+
+Draggable.prototype.ondrop = function(event){
+  event.preventDefault();
+  this.emit('drop', event);
+  return false;
+};
