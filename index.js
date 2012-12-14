@@ -60,9 +60,9 @@ Emitter(Draggable.prototype);
 
 Draggable.prototype.ondragstart = function(event){
   event.preventDefault();
-  event.dataTransfer.dropEffect = 'move';
+  event.dataTransfer.setData('Text', this.el.id);
+  event.dataTransfer.effectAllowed = 'move';
   this.emit('dragstart', event);
-  return false;
 };
 
 /**
@@ -72,7 +72,6 @@ Draggable.prototype.ondragstart = function(event){
 Draggable.prototype.ondragenter = function(event){
   event.preventDefault();
   this.emit('dragenter', event);
-  return false;
 };
 
 /**
@@ -83,7 +82,6 @@ Draggable.prototype.ondragover = function(event){
   event.preventDefault();
   event.dataTransfer.dropEffect = 'move';
   this.emit('dragover', event);
-  return false;
 };
 
 /**
@@ -93,7 +91,6 @@ Draggable.prototype.ondragover = function(event){
 Draggable.prototype.ondragleave = function(event){
   event.preventDefault();
   this.emit('dragleave', event);
-  return false;
 };
 
 /**
@@ -103,5 +100,4 @@ Draggable.prototype.ondragleave = function(event){
 Draggable.prototype.ondrop = function(event){
   event.preventDefault();
   this.emit('drop', event);
-  return false;
 };
