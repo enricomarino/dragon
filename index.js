@@ -59,7 +59,6 @@ Emitter(Draggable.prototype);
  */
 
 Draggable.prototype.ondragstart = function(event){
-  event.preventDefault();
   event.dataTransfer.setData('Text', this.el.id);
   event.dataTransfer.effectAllowed = 'move';
   this.emit('dragstart', event);

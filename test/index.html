@@ -1,7 +1,8 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Dropload</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Test</title>
+    <meta charset="UTF-8">
     <style>
       body {
         padding: 50px;
@@ -32,21 +33,21 @@
 
       drag
         .on('dragstart', function(event){
-          console.log('dragstart', event);
+          console.log('dragstart');
         });
 
       drop
         .on('dragenter', function(event){
-          console.log('dragenter', event);
+          console.log('dragenter');
         })
         .on('dragover', function(event){
-          console.log('dragover', event);
+          console.log('dragover');
         })
         .on('dragleave', function(event){
-          console.log('dragleave', event);
+          console.log('dragleave');
         })
         .on('drop', function(event){
-          console.log('drop', event);
+          console.log('drop');
         });
     </script>
   </body>
