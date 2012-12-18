@@ -1,7 +1,7 @@
 {
-  "name": "draggable",
-  "repo": "apily/draggable",
-  "description": "Enable draggable functionality on any DOM element",
+  "name": "dragon",
+  "repo": "apily/dragon",
+  "description": "HTML5 Drag and Drop component",
   "version": "0.0.1",
   "keywords": [
     "drag",
