@@ -1,6 +1,6 @@
-# draggable
+# dragon
 
-Enable draggable functionality on any DOM element
+HTML5 Drag and Drop component
 
 ## License
 
