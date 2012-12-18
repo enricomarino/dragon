@@ -1,6 +1,6 @@
 {
-  "name": "draggable",
-  "description": "Enable draggable functionality on any DOM element",
+  "name": "dragon",
+  "description": "HTML5 Drag and Drop component",
   "version": "0.0.1",
   "maintainers": [
     {
