@@ -27,9 +27,9 @@
     <div id="drop">drop area</div>
     <script src="../build/build.js"></script>
     <script>
-      var Draggable = require('draggable');
-      var drag = Draggable(document.getElementById('drag'));
-      var drop = Draggable(document.getElementById('drop'));
+      var Dragon = require('dragon');
+      var drag = Dragon(document.getElementById('drag'));
+      var drop = Dragon(document.getElementById('drop'));
 
       drag
         .on('dragstart', function(event){
