@@ -17,7 +17,7 @@ var Emitter = require('emitter');
  * Expose `Draggable`.
  */
 
-module.exports = Draggable;
+module.exports = Dragon;
 
 /**
  * Initialize a draggable element
@@ -35,7 +35,7 @@ module.exports = Draggable;
  * @api public
  */
 
-function Draggable(el) {
+function Dragon(el) {
   if (!(this instanceof Draggable)) return new Draggable(el);
   Emitter.call(this);
   this.el = el;
@@ -51,13 +51,13 @@ function Draggable(el) {
  * Mixin emitter.
  */
 
-Emitter(Draggable.prototype);
+Emitter(Dragon.prototype);
 
 /**
  * Dragenter handler.
  */
 
-Draggable.prototype.ondragstart = function(event){
+Dragon.prototype.ondragstart = function(event){
   event.dataTransfer.setData('Text', this.el.id);
   event.dataTransfer.effectAllowed = 'move';
   this.emit('dragstart', event);
@@ -67,7 +67,7 @@ Draggable.prototype.ondragstart = function(event){
  * Dragenter handler.
  */
 
-Draggable.prototype.ondragenter = function(event){
+Dragon.prototype.ondragenter = function(event){
   event.preventDefault();
   this.emit('dragenter', event);
 };
@@ -76,7 +76,7 @@ Draggable.prototype.ondragenter = function(event){
  * Dragover handler.
  */
 
-Draggable.prototype.ondragover = function(event){
+Dragon.prototype.ondragover = function(event){
   event.preventDefault();
   event.dataTransfer.dropEffect = 'move';
   this.emit('dragover', event);
@@ -86,7 +86,7 @@ Draggable.prototype.ondragover = function(event){
  * Dragleave handler.
  */
 
-Draggable.prototype.ondragleave = function(event){
+Dragon.prototype.ondragleave = function(event){
   event.preventDefault();
   this.emit('dragleave', event);
 };
@@ -95,7 +95,7 @@ Draggable.prototype.ondragleave = function(event){
  * Drop handler.
  */
 
-Draggable.prototype.ondrop = function(event){
+Dragon.prototype.ondrop = function(event){
   event.preventDefault();
   this.emit('drop', event);
 };
