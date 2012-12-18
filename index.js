@@ -14,7 +14,7 @@
 var Emitter = require('emitter');
 
 /**
- * Expose `Draggable`.
+ * Expose `Dragon`.
  */
 
 module.exports = Dragon;
