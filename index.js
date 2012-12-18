@@ -36,7 +36,7 @@ module.exports = Dragon;
  */
 
 function Dragon(el) {
-  if (!(this instanceof Draggable)) return new Draggable(el);
+  if (!(this instanceof Dragon)) return new Dragon(el);
   Emitter.call(this);
   this.el = el;
   el.draggable = true;
