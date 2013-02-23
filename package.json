@@ -2,6 +2,11 @@
   "name": "dragon",
   "description": "HTML5 Drag and Drop component",
   "version": "0.0.1",
+  "author": {
+    "name": "Enrico Marino",
+    "email": "enrico.marino@email.com",
+    "url": "http://onirame.com"
+  },
   "maintainers": [
     {
       "name": "Enrico Marino",
@@ -15,10 +20,10 @@
     }
   ],
   "main": "index.js",
-  "homepage": "https://github.com/apily/draggable",
+  "homepage": "https://github.com/enricomarino/dragon",
   "repository": {
     "type": "git",
-    "url": "git://github.com/apily/draggable.git"
+    "url": "git://github.com/enricomarino/dragon.git"
   },
   "main": "index.js",
   "engines": {
