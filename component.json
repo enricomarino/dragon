@@ -1,20 +1,13 @@
 {
   "name": "dragon",
-  "repo": "apily/dragon",
+  "repo": "enricomarino/dragon",
   "description": "HTML5 Drag and Drop component",
   "version": "0.0.1",
-  "keywords": [
-    "drag",
-    "drop",
-    "HTML5",
-    "DOM"
-  ],
+  "keywords": ["HTML5", "Element", "drag", "drop"],
   "dependencies": {
     "component/emitter": "*"
   },
   "development": {},
-  "scripts": [
-    "index.js"
-  ],
+  "scripts": ["index.js"],
   "license": "MIT"
 }
