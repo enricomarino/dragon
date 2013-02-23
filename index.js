@@ -1,9 +1,10 @@
+
 /* !
  * dragon
  * HTML5 Drag and Drop component
  *
- * @author Enrico Marino and Federico Spini
- * @copyright 2012 Enrico Marino and Federico Spini
+ * @author Enrico Marino
+ * @copyright 2013 Enrico Marino
  * @license MIT
  */
 
